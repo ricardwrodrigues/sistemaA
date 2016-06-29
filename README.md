@@ -15,5 +15,5 @@ O sistema esta baseado em testes e não existe uma interface para o usuário.
 
 H2 para fins de teste e visualização do funcionamento.
 
-mvn test x
+mvn test x 
 
