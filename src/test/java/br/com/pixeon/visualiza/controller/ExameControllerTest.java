@@ -85,7 +85,9 @@ public class ExameControllerTest {
         exameImage = new ExameImage();
         exameImage.setUri("http://localhost:8080/api/exame/image");
         Map<String,String> parameters = new HashMap<>();
+        //parametros necessario para montagem da query
         parameters.put("imageId","1");
+        //ex resultado final :http://localhost:8080/api/exame/image?imageId=1
         exameImage.setParameters(parameters);
         //Exame
         exame = new Exame();
@@ -126,7 +128,7 @@ public class ExameControllerTest {
 
     @Test
     @Transactional
-    public void getExameImage() throws Exception {
+    public void getExameImageURL() throws Exception {
         exameRepository.saveAndFlush(exame);
 
         restExameMockMvc.perform(get("/api/exames/image/{id}", exameImage.getImageId()))
