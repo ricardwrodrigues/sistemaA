@@ -1,7 +1,7 @@
 # Sistema A
 
 O Sistema A, foi projetado para solucionar o problema de exibição das imagens que estão disponíveis via interface REST nas clinicas.
-A solução foi não guardar as informações do API REST com uma configuração, mas um metadata contendo uri e parametros "chave/valor" e gerar a url para essa consulta.
+A solução foi não guardar as informações do API REST com uma configuração, mas um metadata contendo uri e parametros "chave/valor" e ExameImageUtil gerar  a url para essa consulta.
 
 Não foram discutidas padronização de protocolos entre clinica e aplicação cloud.
 
