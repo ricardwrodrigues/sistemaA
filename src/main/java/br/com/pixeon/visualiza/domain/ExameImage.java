@@ -34,9 +34,10 @@ public class ExameImage  implements Serializable {
     @Column(length = 255, nullable = false)
     private String uri;
 
+    @NotNull
     @ElementCollection
     @MapKeyColumn(name = "chave", unique = true)
-    @Column(name = "valor")
+    @Column(name = "valor", nullable = false)
     @CollectionTable(name = "tb_exame_image_param", joinColumns=@JoinColumn(name="image_id"))
     private Map<String, String> parameters = new HashMap<>();
 
