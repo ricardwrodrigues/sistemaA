@@ -20,6 +20,12 @@ import java.util.Map;
  */
 public class ExameImageUtil {
 
+    /**
+     * Gera a url para para imagens
+     * @param baseUrl caminho API REST
+     * @param parameters qurery
+     * @return
+     */
     public static String generateUri(String baseUrl, Map<String,String> parameters){
         if ("".equals(baseUrl)) return baseUrl;
         return UriComponentsBuilder.fromHttpUrl(baseUrl).queryParams(converter(parameters)).build().toUriString();
